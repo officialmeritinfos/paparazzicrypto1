@@ -37,6 +37,7 @@
                                         @else
                                             ${{number_format($package->maxAmount)}}
                                         @endif
+                                        - {{ $package->roi }}% - {{ $package->Duration }}
                                     )
                                     </option>
                                 @endforeach
