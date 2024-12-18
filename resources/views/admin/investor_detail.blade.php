@@ -364,6 +364,8 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
+                        <th>Phone</th>
+                        <th>Photo</th>
                         <th> Country</th>
                         <th> State/Region</th>
                         <th> Address</th>
@@ -377,6 +379,10 @@
                         <tr>
                             <td>{{$member->reference}}</td>
                             <td>{{$member->name}}</td>
+                            <td>{{$member->phone}}</td>
+                            <td>
+                                <img src="{{ asset('dashboard/user/images/'.$member->selfie) }}" style="width: 150px;">
+                            </td>
                             <td>{{$member->country}}</td>
                             <td>{{$member->state}}</td>
                             <td>{{$member->address}}</td>

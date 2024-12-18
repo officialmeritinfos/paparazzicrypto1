@@ -40,6 +40,8 @@ class MembershipController extends Controller
             'country'=>['required','string','max:200'],
             'state'=>['required','string','max:150'],
             'address'=>['required','string','max:2000'],
+            'phone'=>['required','string','max:2000'],
+            'selfie'=>['required','image'],
         ]);
 
         if ($validator->fails()){
@@ -51,12 +53,21 @@ class MembershipController extends Controller
         //generate deposit reference
         $reference = $this->generateId('membership_applications','reference',6);
 
+        if ($request->hasFile('selfie')) {
+            //lets upload the first image
+            $frontImage = time() . '_' . $request->file('selfie')->hashName();
+            $request->frontImage->move(public_path('dashboard/user/images/'), $frontImage);
+
+        }else{
+            return back()->with('error','Passport Photograph is compulsory.');
+        }
+
 
         $membership = MembershipApplication::create([
             'user'=>$user->id,'reference'=>$reference,
             'address'=>$input['address'],
             'status'=>2, 'name'=>$input['name'],'country'=>$input['country'],
-            'state'=>$input['state']
+            'state'=>$input['state'],'selfie'=>$frontImage,'phone'=>$input['phone']
         ]);
         if (!empty($membership)){
             //send mail to admin

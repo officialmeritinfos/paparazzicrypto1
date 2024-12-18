@@ -15,13 +15,23 @@
                         <h5 class="mb-0 text-primary">{{$pageName}}</h5>
                     </div>
                     <hr>
-                    <form class="row g-3" method="post" action="{{route('membership.new')}}">
+                    <form class="row g-3" method="post" action="{{route('membership.new')}}" enctype="multipart/form-data">
                         @csrf
                         @include('templates.notification')
                         <div class="form-group col-md-12">
                             <label for="inputAddress2">Name</label>
                             <input type="text" class="form-control form-control-lg" id="inputAddress2"
                                    placeholder="Name" name="name">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="inputAddress2">Phone</label>
+                            <input type="text" class="form-control form-control-lg" id="inputAddress2"
+                                   placeholder="Name" name="phone">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="inputAddress2">Passport-sized Photograph</label>
+                            <input type="file" class="form-control form-control-lg" id="inputAddress2"
+                                   placeholder="Name" name="selfie">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputAddress2">Country</label>
@@ -60,6 +70,8 @@
                     <thead>
                     <tr>
                         <th>Name</th>
+                        <th>Phone</th>
+                        <th>Photograph</th>
                         <th> Country</th>
                         <th> State/Region</th>
                         <th> Address</th>
@@ -71,6 +83,10 @@
                     @foreach($members as $member)
                         <tr>
                             <td>{{$member->name}}</td>
+                            <td>{{$member->phone}}</td>
+                            <td>
+                                <img src="{{ asset('dashboard/user/images/'.$member->selfie) }}" style="width: 150px;">
+                            </td>
                             <td>{{$member->country}}</td>
                             <td>{{$member->state}}</td>
                             <td>{{$member->address}}</td>
