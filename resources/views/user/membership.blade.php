@@ -15,7 +15,8 @@
                         <h5 class="mb-0 text-primary">{{$pageName}}</h5>
                     </div>
                     <hr>
-                    <form class="row g-3" method="post" action="{{route('membership.new')}}" enctype="multipart/form-data">
+                    <form class="row g-3" method="post" action="{{route('membership.new')}}"
+                          enctype="multipart/form-data">
                         @csrf
                         @include('templates.notification')
                         <div class="form-group col-md-12">
@@ -30,8 +31,7 @@
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputAddress2">Passport-sized Photograph</label>
-                            <input type="file" class="form-control form-control-lg" id="inputAddress2"
-                                   placeholder="Name" name="selfie">
+                            <input type="file" class="form-control form-control-lg" id="inputAddress2" name="selfie">
                         </div>
                         <div class="form-group col-md-12">
                             <label for="inputAddress2">Country</label>
@@ -64,7 +64,6 @@
             <h6 class="m-0 font-weight-bold text-primary">List</h6>
         </div>
         <div class="card-body">
-            @include('templates.notification')
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>

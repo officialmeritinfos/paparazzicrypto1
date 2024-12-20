@@ -35,13 +35,13 @@ class MembershipController extends Controller
     {
         $web = GeneralSetting::where('id',1)->first();
         $user = Auth::user();
-        $validator = Validator::make($request->input(),[
+        $validator = Validator::make($request->all(),[
             'name'=>['required','string','max:150'],
             'country'=>['required','string','max:200'],
             'state'=>['required','string','max:150'],
             'address'=>['required','string','max:2000'],
             'phone'=>['required','string','max:2000'],
-            'selfie'=>['required','image'],
+            'selfie'=>['required','image','max:2048'],
         ]);
 
         if ($validator->fails()){
@@ -56,7 +56,7 @@ class MembershipController extends Controller
         if ($request->hasFile('selfie')) {
             //lets upload the first image
             $frontImage = time() . '_' . $request->file('selfie')->hashName();
-            $request->frontImage->move(public_path('dashboard/user/images/'), $frontImage);
+            $request->selfie->move(public_path('dashboard/user/images/'), $frontImage);
 
         }else{
             return back()->with('error','Passport Photograph is compulsory.');
