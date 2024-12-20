@@ -42,6 +42,8 @@ class MembershipController extends Controller
             'address'=>['required','string','max:2000'],
             'phone'=>['required','string','max:2000'],
             'selfie'=>['required','image','max:2048'],
+        ],[],[
+            'selfie' => "Passport-sized photograph"
         ]);
 
         if ($validator->fails()){
