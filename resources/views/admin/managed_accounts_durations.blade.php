@@ -30,6 +30,9 @@
                             <td>{{$account->duration}}</td>
                             <td>${{$account->amount}}</td>
                             <td>
+                                <a href="{{route('admin.accounts.duration.edit',['id'=>$account->id])}}" class="btn btn-primary mt-4">
+                                    <i class="fa fa-edit"></i> Edit
+                                </a>
                                 <a href="{{route('admin.accounts.duration.delete',['id'=>$account->id])}}" class="btn btn-danger mt-4">
                                     <i class="fa fa-trash"></i> Delete
                                 </a>

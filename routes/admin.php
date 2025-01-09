@@ -40,10 +40,6 @@ Route::get('transfers',[Transfers::class,'landingPage'])->name('transfers.index'
 Route::get('accounts',[ManagedAccounts::class,'landingPage'])->name('accounts.index');
 Route::get('accounts/{id}/complete',[ManagedAccounts::class,'markCompleted'])->name('accounts.complete');
 Route::get('accounts/{id}/activate',[ManagedAccounts::class,'markOngoing'])->name('accounts.activate');
-/*================ MANAGED ACCOUNTS DURATION ROUTE ====================*/
-Route::get('accounts/duration',[ManagedAccountDurations::class,'landingPage'])->name('accounts.duration.index');
-Route::get('accounts/duration/{id}/delete',[ManagedAccountDurations::class,'delete'])->name('accounts.duration.delete');
-Route::post('accounts/duration/new',[ManagedAccountDurations::class,'addNew'])->name('accounts.duration.new');
 
 /*================ DEPOSIT ROUTE ====================*/
 Route::get('deposits',[Deposits::class,'landingPage'])->name('deposit.index');
@@ -168,6 +164,15 @@ Route::post('notifications/update',[Notifications::class,'updatePromo'])->name('
 Route::get('notifications/{id}/delete',[Notifications::class,'delete'])->name('notification.delete');
 Route::get('notifications/create',[Notifications::class,'create'])->name('notification.create');
 Route::post('notifications/new',[Notifications::class,'newPromo'])->name('notification.new');
+
+/*================ MANAGED ACCOUNTS DURATION ROUTE ====================*/
+Route::get('accounts/duration',[ManagedAccountDurations::class,'landingPage'])->name('accounts.duration.index');
+Route::get('accounts/duration/{id}/delete',[ManagedAccountDurations::class,'delete'])->name('accounts.duration.delete');
+Route::post('accounts/duration/new',[ManagedAccountDurations::class,'addNew'])->name('accounts.duration.new');
+Route::get('accounts/duration/{id}/edit',[ManagedAccountDurations::class,'edit'])->name('accounts.duration.edit');
+Route::post('accounts/duration/{id}/update',[ManagedAccountDurations::class,'update'])->name('accounts.duration.update');
+
+
 
 //Logout
 Route::get('logout',[Login::class,'logout']);
