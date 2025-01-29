@@ -156,6 +156,20 @@
             </div>
 
             <div class="services-slides owl-carousel owl-theme">
+                <div class="single-services-box">
+                    <div class="image">
+                        <a href="{{ route('home.retirement') }}">
+                            <img src="{{asset('home/serv/ira.jpg')}}" alt="image">
+                        </a>
+                    </div>
+                    <div class="content">
+                        <h3><a href="{{ route('home.retirement') }}">IRA & Retirements</a></h3>
+                        <p>
+                            Prepare for retirement with an IRA account specifically made and tailored to your need.
+                        </p>
+                        <a href="{{ route('home.retirement') }}" class="default-btn">Read More <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
                 @foreach($services as $service)
                     <div class="single-services-box">
                         <div class="image">

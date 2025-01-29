@@ -159,6 +159,7 @@
                 <div class="single-footer-widget pl-2">
                     <h3>Services</h3>
                     <ul class="links-list">
+                        <li><a href="{{ route('home.retirement') }}" >Retirement and IRAs</a></li>
                         @foreach($injected->getServices() as $service)
                             <li><a href="{{route('service.details',['id'=>$service->id])}}">{{$service->title}}</a></li>
                         @endforeach
