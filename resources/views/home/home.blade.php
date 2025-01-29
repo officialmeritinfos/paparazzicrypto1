@@ -297,6 +297,13 @@
             </div>
 
             <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-projects-box">
+                        <img src="{{asset('home/serv/ira.jpg')}}" alt="image">
+                        <h3>IRA & Retirement</h3>
+                        <span>Financial</span>
+                    </div>
+                </div>
                 @foreach($sectors as $project)
                     <div class="col-lg-4 col-md-6">
                         <div class="single-projects-box">
