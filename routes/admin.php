@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\Dashboard;
 use App\Http\Controllers\Admin\Deposits;
 use App\Http\Controllers\Admin\Investments;
 use App\Http\Controllers\Admin\Investors;
+use App\Http\Controllers\Admin\LatestTransactionController;
 use App\Http\Controllers\Admin\ManagedAccountDurations;
 use App\Http\Controllers\Admin\ManagedAccounts;
 use App\Http\Controllers\Admin\Notifications;
@@ -172,6 +173,10 @@ Route::post('accounts/duration/new',[ManagedAccountDurations::class,'addNew'])->
 Route::get('accounts/duration/{id}/edit',[ManagedAccountDurations::class,'edit'])->name('accounts.duration.edit');
 Route::post('accounts/duration/{id}/update',[ManagedAccountDurations::class,'update'])->name('accounts.duration.update');
 
+/*================ LATEST TRANSACTIONS ROUTE ====================*/
+Route::get('latest-transactions/index',[LatestTransactionController::class,'landingPage'])->name('latest-transactions.index');
+Route::post('latest-transaction/create',[LatestTransactionController::class,'newTransaction'])->name('latest-transaction.new-transaction');
+Route::get('latest-transaction/{id}/delete',[PromoController::class,'delete'])->name('latest-transaction.delete');
 
 
 //Logout

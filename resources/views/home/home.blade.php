@@ -297,48 +297,6 @@
     </div>
     <!-- End Projects Area -->
 
-
-    <div class="pricing-area" style="margin-bottom: 5rem;margin-top: 5rem;">
-        <div class="container">
-            <div class="section-title">
-                <span class="sub-title">Our Packages</span>
-                <h2>Specialized Investment Packages</h2>
-            </div>
-            <div class="row justify-content-center">
-                @foreach($packages as $package)
-                    @inject('option','App\Defaults\Custom')
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-price">
-                            <div class="deal-top">
-                                <h3>{{$package->name}}</h3>
-                                <h4> {{$package->roi}}%/ <span class="sup">{{$option->getReturnType($package->returnType)}}</span> </h4>
-                                <small class="text-white">{{$package->note}}</small>
-                            </div>
-                            <div class="deal-bottom">
-                                <ul class="deal-item">
-                                    <li>
-                                        Price: ${{number_format($package->minAmount,2)}} - @if($package->isUnlimited !=1)
-                                            ${{number_format($package->maxAmount,2)}}
-                                        @else
-                                            Unlimited
-                                        @endif
-                                    </li>
-                                    <li>Profit return: {{$package->roi}}% {{$option->getReturnType($package->returnType)}}</li>
-                                    <li>Contract Duration: {{$package->Duration}}</li>
-                                    <li>Referral Bonus: {{$package->referral}}% </li>
-                                </ul>
-                                <div class="btn-area">
-                                    <a href="{{route('register')}}">Get Started</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-
-            </div>
-        </div>
-    </div>
-
     <!-- Start Testimonial Area -->
     <div class="testimonial-area ptb-100 bg-fafafa">
         <div class="container">
@@ -508,7 +466,7 @@
                         @foreach($deposits as $deposit)
                             @inject('option','App\Defaults\Custom')
                             <tr>
-                                <td>{{$option->getInvestorUsername($deposit->user)}}</td>
+                                <td>{{$deposit->name}}</td>
                                 <td>${{number_format($deposit->amount,2)}}</td>
                             </tr>
                         @endforeach
@@ -529,9 +487,9 @@
                         </thead>
                         <tbody>
                         @foreach($withdrawals as $withdrawal)
-                            @inject('option','App\Defaults\Custom')
+
                             <tr>
-                                <td>{{$option->getInvestorUsername($withdrawal->user)}}</td>
+                                <td>{{$withdrawal->name}}</td>
                                 <td>${{number_format($withdrawal->amount,2)}}</td>
                             </tr>
                         @endforeach

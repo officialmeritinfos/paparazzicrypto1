@@ -6,6 +6,7 @@ use App\Models\Deposit;
 use App\Models\GeneralSetting;
 use App\Models\Guest;
 use App\Models\Investment;
+use App\Models\LatestTransaction;
 use App\Models\Package;
 use App\Models\ReturnType;
 use App\Models\Service;
@@ -31,8 +32,8 @@ class HomeController extends Controller
             'web'       => $web,
             'pageName'  => 'Home Page',
             'packages'  => Package::where('status',1)->get(),
-            'deposits'=>Investment::where('status','1')->orWhere('status','4')->orderBy('id','desc')->limit(5)->get(),
-            'withdrawals'=>Withdrawal::where('status','!=',3)->orderBy('id','desc')->limit(5)->get(),
+            'withdrawals'=>LatestTransaction::where('type','withdrawal')->orderBy('id','desc')->limit(5)->get(),
+            'deposits'=>LatestTransaction::where('type','deposit')->orderBy('id','desc')->limit(5)->get(),
             'services'  =>Service::where('status',1)->get(),
             'sectors'  =>Service::where('status',1)->where('isSector',1)->get()
         ];
@@ -236,7 +237,7 @@ class HomeController extends Controller
         $dataView = [
             'siteName'  => $web->name,
             'web'       => $web,
-            'pageName'  => 'Retirement',
+            'pageName'  => 'Retirement and IRAs',
             'packages'  => Package::where('status',1)->get()
         ];
 

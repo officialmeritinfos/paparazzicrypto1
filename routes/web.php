@@ -39,7 +39,7 @@ Route::get('buy-btc',[HomeController::class,'buyBtc']);
 Route::get('register',[Register::class,'landingPage']);
 //Services
 Route::get('realestate',[HomeController::class,'realEstate']);
-Route::get('retirement',[HomeController::class,'retirement']);
+Route::get('retirement-and-iras',[HomeController::class,'retirement'])->name('home.retirement');
 Route::get('stocks',[HomeController::class,'stocks']);
 Route::get('nft',[HomeController::class,'nft']);
 Route::get('forex',[HomeController::class,'forex']);

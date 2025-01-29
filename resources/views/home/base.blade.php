@@ -100,6 +100,7 @@
                                 @foreach($injected->getServices() as $service)
                                     <li class="nav-item"><a href="{{route('service.details',['id'=>$service->id])}}" class="nav-link">{{$service->title}}</a></li>
                                 @endforeach
+                                <li class="nav-item"><a href="{{ route('home.retirement') }}" class="nav-link">Retirement and IRAs</a></li>
                             </ul>
                         </li>
 
