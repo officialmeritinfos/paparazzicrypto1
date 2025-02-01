@@ -105,7 +105,7 @@ class Investments extends Controller
                 $newBalance = [
                     'balance'=>$balance - $input['amount']
                 ];
-                $status=2;
+                $status=4;
                 break;
             default:
                 $balance = $user->profit;
