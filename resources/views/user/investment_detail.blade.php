@@ -107,30 +107,30 @@
         </div>
     </div>
 
-    @if($investment->source=='balance')
+{{--    @if($investment->source=='balance')--}}
 
-        <div class="container-fluid mt-5">
-            <div class="alert-email text-center">
-                <img  src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{$investment->wallet}}">
-                <span class="email-text">Read the instruction below</span>
+{{--        <div class="container-fluid mt-5">--}}
+{{--            <div class="alert-email text-center">--}}
+{{--                <img  src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{$investment->wallet}}">--}}
+{{--                <span class="email-text">Read the instruction below</span>--}}
 
-                <div class="email-content">
-                    <p class="report">
-                        You are to send <b>{{number_format($investment->amount,2)}} of {{$investment->asset}}</b>
-                        to the address <b style="font-size:20px;" id="address">{{$investment->wallet}}</b>.<br>
-                        After making payment, contact support for instant crediting.<br/>
+{{--                <div class="email-content">--}}
+{{--                    <p class="report">--}}
+{{--                        You are to send <b>{{number_format($investment->amount,2)}} of {{$investment->asset}}</b>--}}
+{{--                        to the address <b style="font-size:20px;" id="address">{{$investment->wallet}}</b>.<br>--}}
+{{--                        After making payment, contact support for instant crediting.<br/>--}}
 
-                        Alternatively, you can scan the Barcode above to get the wallet address:<br/>
-                    </p>
-                    <div class="text-center">
-                        <button data-clipboard-target="#address" class="default-btn copy">
-                            Copy Wallet Address
-                        </button>
-                    </div>
-                    <p class="dastone">Thanks for choosing <span>{{$siteName}}</span> <br/></p>
-                </div>
-            </div>
-        </div>
-    @endif
+{{--                        Alternatively, you can scan the Barcode above to get the wallet address:<br/>--}}
+{{--                    </p>--}}
+{{--                    <div class="text-center">--}}
+{{--                        <button data-clipboard-target="#address" class="default-btn copy">--}}
+{{--                            Copy Wallet Address--}}
+{{--                        </button>--}}
+{{--                    </div>--}}
+{{--                    <p class="dastone">Thanks for choosing <span>{{$siteName}}</span> <br/></p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    @endif--}}
 
 @endsection

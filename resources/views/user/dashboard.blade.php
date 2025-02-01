@@ -33,7 +33,12 @@
             <div class="row justify-content-between">
                 <div class="col-lg-3 col-sm-6 text-start col-6">
                     <div class="single-today-card d-flex align-items-center">
-                        <a href="{{route('new_investment')}}" class="default-btn">Deposit</a>
+                        <a href="{{route('new_deposit')}}" class="default-btn">Deposit</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 text-start col-6">
+                    <div class="single-today-card d-flex align-items-center">
+                        <a href="{{route('new_investment')}}" class="default-btn">Invest</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 text-end col-6">
@@ -48,6 +53,18 @@
                     <div class="single-today-card d-flex align-items-center">
                         <div class="flex-grow-1">
                             <span class="today">Account Balance</span>
+                            <h6>${{number_format($user->balance,2)}}</h6>
+                        </div>
+
+                        <div class="flex-shrink-0 align-self-center">
+                            <img src="{{asset('dashboard/user/images/icon/user.png')}}" alt="Images">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-today-card d-flex align-items-center">
+                        <div class="flex-grow-1">
+                            <span class="today">Profit Balance</span>
                             <h6>${{number_format($user->profit,2)}}</h6>
                         </div>
 

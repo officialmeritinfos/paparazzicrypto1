@@ -68,4 +68,9 @@ class Custom{
     {
         return Service::where('status',1)->where('isSector',1)->get();
     }
+
+    public function getPlanNumberService($service)
+    {
+
+    }
 }

@@ -1,140 +1,239 @@
-@extends('home.base')
+@extends('home.innerBase')
 @section('content')
-    @push('css')
-        <style>
-            body {
-                font-family: 'Arial', sans-serif;
-                background-color: #f8f9fa;
-            }
-            .section-padding {
-                padding: 60px 0;
-            }
-            .btn-custom {
-                background-color: #007bff;
-                color: white;
-                border-radius: 25px;
-                padding: 12px 30px;
-                transition: all 0.3s;
-            }
-            .btn-custom:hover {
-                background-color: #0056b3;
-            }
-            .icon-box {
-                font-size: 40px;
-                color: #007bff;
-                margin-bottom: 15px;
-            }
-            .bg-light-blue {
-                background-color: #e3f2fd;
-            }
-            .bg-dark-blue {
-                background-color: #0d6efd;
-                color: white;
-            }
-            .card {
-                border: none;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                transition: 0.3s;
-            }
-            .card:hover {
-                transform: translateY(-5px);
-            }
-        </style>
-    @endpush
-    <!-- Start Page-title Area -->
-    <div class="page-title-area bg-black">
-        <div class="container">
-            <div class="page-title-content">
-                <h2>{{$pageName}}</h2>
-                <ul>
-                    <li><a href="{{url('/')}}">Home</a></li>
-                    <li>{{$pageName}}</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- End Page-title Area -->
 
-    <section class="container text-center section-padding">
-        <h2 class="fw-bold">Retirement and IRAs</h2>
-        <p class="lead">With a {{ $siteName}} IRA, you can manage your investments yourself with no account fees or let us do it for you for an advisory fee.</p>
-        <a href="{{ route('register') }}" class="btn btn-custom btn-lg mt-3">Register Now!</a>
-    </section>
+    @push('body')
 
-    <section class="container section-padding">
-        <h3 class="fw-bold text-center">Understanding Retirement Investments</h3>
-        <p class="text-center">Retirement investments provide financial stability for the future by leveraging stocks, bonds, mutual funds, and more.</p>
-        <div class="row text-center mt-4">
-            <div class="col-md-4">
-                <i class="fas fa-piggy-bank icon-box"></i>
-                <h5 class="fw-bold">Tax Benefits</h5>
-                <p>Enjoy tax-deferred growth or tax-free earnings depending on your investment plan.</p>
-            </div>
-            <div class="col-md-4">
-                <i class="fas fa-chart-line icon-box"></i>
-                <h5 class="fw-bold">Diversification</h5>
-                <p>Reduce risk by spreading investments across multiple asset classes.</p>
-            </div>
-            <div class="col-md-4">
-                <i class="fas fa-coins icon-box"></i>
-                <h5 class="fw-bold">Compound Interest</h5>
-                <p>Reinvested earnings lead to significant financial growth over time.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-light-blue section-padding">
-        <div class="container">
-            <h3 class="fw-bold text-center">Your Tax Preferences</h3>
-            <div class="row text-center mt-4">
-                <div class="col-md-4">
-                    <div class="card p-4">
-                        <h4 class="fw-bold">Tax-Deferred Growth</h4>
-                        <p>Reduce taxable income and pay taxes only when you withdraw during retirement.</p>
+        <body class="envato_tk_templates-template envato_tk_templates-template-elementor_header_footer single single-envato_tk_templates postid-294 elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-294">
+        @endpush
+        <div data-elementor-type="wp-post" data-elementor-id="294" class="elementor elementor-294" data-elementor-settings="[]">
+            <div class="elementor-section-wrap">
+                <style>
+                    .fullscreen-bg {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        overflow: hidden;
+                    }
+                    .fullscreen-bg__video {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: auto;
+                    }
+                    @media (min-aspect-ratio: 16/9) {
+                        .fullscreen-bg__video {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                    @media (max-width: 767px) {
+                        .fullscreen-bg__video {
+                            width: auto;
+                            height: auto;
+                        }
+                        .fullscreen-bg{
+                            width: 1000px;
+                        }
+                    }
+                    #overlay {
+                        position: absolute;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: rgba(0,0,0,0.3);
+                        z-index: 1;
+                        cursor: pointer;
+                    }
+                </style>
+                <section class="ob-is-breaking-bad elementor-section elementor-top-section elementor-element elementor-element-f1ac91d elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="f1ac91d" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                    <div class="elementor-background-overlay">
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-4">
-                        <h4 class="fw-bold">Tax-Free Growth</h4>
-                        <p>Withdraw contributions without taxes or penalties before retirement.</p>
+                    <div id="overlay"></div>
+                    <div class="fullscreen-bg">
+                        <video autoplay muted loop playsinline class="fullscreen-bg__video">
+                            <source src="{{asset('home/static/temp/video/video3.mp4')}}" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-4">
-                        <h4 class="fw-bold">401(k) Rollovers</h4>
-                        <p>Consolidate your former 401(k)s or 403(b)s into a single account.</p>
+                    <div class="elementor-container elementor-column-gap-default" style="z-index: 2">
+                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b36272c elementor-invisible" data-id="b36272c" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-467b2a0 ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="467b2a0" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <h1 class="elementor-heading-title elementor-size-default">{{$pageName}}
+                                        </h1>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-293bf1b ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="293bf1b" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <h5 class="elementor-heading-title elementor-size-default">
+                                            Start now to plan and save for your retirement. {{$siteName}} has the best retirement plan.
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </section>
+
+                <section class="ob-is-breaking-bad elementor-section elementor-top-section elementor-element elementor-element-9e55886 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9e55886" data-element_type="section" data-settings="{&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3dc3f31 elementor-invisible" data-id="3dc3f31" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-80935ab ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="80935ab" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <h6 class="elementor-heading-title elementor-size-default">About Retirement
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-9193c26 ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="9193c26" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <h2 class="elementor-heading-title elementor-size-default">Commence Now to Safeguard Your Future
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-ca77d0c ob-harakiri-inherit elementor-widget elementor-widget-text-editor" data-id="ca77d0c" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="text-editor.default">
+                                    <div class="elementor-widget-container">
+                                        <p>
+                                            This involves financial strategies such as saving, investing, and ultimately distributing money to sustain oneself during retirement.
+                                        </p>
+                                        <p>
+                                            The emphasis on retirement planning evolves through different life stages. In the early stages of one's career, it involves setting aside enough money for retirement. In the middle of your career, it may also include establishing specific income or asset targets and taking steps to achieve them. Upon reaching retirement age, you transition from accumulating assets to what planners refer to as the distribution phase. You are no longer contributing; instead, the savings accumulated over decades with {{$siteName}} are now paying out.
+                                        </p>
+
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-2e76fa3 elementor-widget elementor-widget-button" data-id="2e76fa3" data-element_type="widget" data-settings="{&quot;_ob_butterbutton_use_it&quot;:&quot;no&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="button.default">
+                                    <div class="elementor-widget-container">
+                                        <div class="elementor-button-wrapper">
+                                            <a href="{{route('register')}}" class="elementor-button-link elementor-button elementor-size-md elementor-animation-wobble-horizontal" role="button">
+                        <span class="elementor-button-content-wrapper">
+                          <span class="elementor-button-text">Start Membership <i class="fa fa-arrow-circle-right"></i>
+                          </span>
+                        </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3dc3f31 elementor-invisible" data-id="3dc3f31" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-80935ab ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="80935ab" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <img width="1600" height="1024" src="{{asset('home/static/temp/wp-content/uploads/sites/56/2021/08/retirement.jpg')}}" class="attachment-full size-full" alt="" loading="lazy" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="ob-is-breaking-bad elementor-section elementor-top-section elementor-element elementor-element-4d222d8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4d222d8" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                    <div class="elementor-background-overlay">
+                    </div>
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6bf193d" data-id="6bf193d" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                            <div class="elementor-widget-wrap elementor-element-populated">
+                                <div class="elementor-element elementor-element-96bfd81 ob-harakiri-inherit elementor-invisible elementor-widget elementor-widget-heading" data-id="96bfd81" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;,&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <h6 class="elementor-heading-title elementor-size-default">Company Value
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-6bea625 ob-harakiri-inherit elementor-invisible elementor-widget elementor-widget-heading" data-id="6bea625" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;,&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <h2 class="elementor-heading-title elementor-size-default">Its all about your Future
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-f4d2de9 elementor-widget__width-initial ob-harakiri-inherit elementor-invisible elementor-widget elementor-widget-text-editor" data-id="f4d2de9" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;,&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="text-editor.default">
+                                    <div class="elementor-widget-container">
+                                        <p>We focus on comprehensive financial advice and investment services
+                                        </p>
+                                    </div>
+                                </div>
+                                <section class="ob-is-breaking-bad ob-bb-inner elementor-section elementor-inner-section elementor-element elementor-element-db01ba1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="db01ba1" data-element_type="section" data-settings="{&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                                    <div class="elementor-container elementor-column-gap-default">
+                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-a3879b8 elementor-invisible" data-id="a3879b8" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <div class="elementor-element elementor-element-9f05554 ekit-equal-height-enable elementor-widget elementor-widget-elementskit-icon-box" data-id="9f05554" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-icon-box.default">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="ekit-wid-con" >
+                                                            <!-- link opening -->
+                                                            <!-- end link opening -->
+                                                            <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
+                                                                <div class="box-body">
+                                                                    <h3 class="elementskit-info-box-title">
+                                                                        Vision
+                                                                    </h3>
+                                                                    <p>In a fast-moving and increasingly complex global economy, our success depends on how faithfully we adhere to our core principles: delivering exceptional client service and acting with integrity.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-9ddae7c elementor-invisible" data-id="9ddae7c" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:120,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <div class="elementor-element elementor-element-0c4c0a6 ekit-equal-height-enable elementor-widget elementor-widget-elementskit-icon-box" data-id="0c4c0a6" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-icon-box.default">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="ekit-wid-con" >
+                                                            <!-- link opening -->
+                                                            <!-- end link opening -->
+                                                            <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
+                                                                <div class="box-body">
+                                                                    <h3 class="elementskit-info-box-title">
+                                                                        Mission
+                                                                    </h3>
+                                                                    <p>Our mission is to generate world-class investment returns over the long term. We aspire to do so in a way that makes our partners and portfolio companies proud, as we build a unique, global company.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-abf2b90 elementor-invisible" data-id="abf2b90" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:240,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                <div class="elementor-element elementor-element-a9e6bcc ekit-equal-height-enable elementor-widget elementor-widget-elementskit-icon-box" data-id="a9e6bcc" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-icon-box.default">
+                                                    <div class="elementor-widget-container">
+                                                        <div class="ekit-wid-con" >
+                                                            <!-- link opening -->
+                                                            <!-- end link opening -->
+                                                            <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
+                                                                <div class="box-body">
+                                                                    <h3 class="elementskit-info-box-title">
+                                                                        Guarantee
+                                                                    </h3>
+                                                                    <p>We are here because we are passionate about open, transparent markets and aim to be a major driving force in widespread adoption, we are the first and the best in investment management.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
-    </section>
-
-    <section class="container section-padding">
-        <h3 class="fw-bold text-center">Traditional vs. Roth IRA</h3>
-        <p class="text-center">Both options have their benefits. Choose one that fits your retirement goals.</p>
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <div class="card p-4">
-                    <h4 class="fw-bold">Traditional IRA</h4>
-                    <p>Contributions may be tax-deductible, grow tax-deferred, but withdrawals are taxed at retirement.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card p-4">
-                    <h4 class="fw-bold">Roth IRA</h4>
-                    <p>Contributions are not tax-deductible, but your money grows tax-free and withdrawals are tax-free in retirement.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-dark-blue text-center section-padding">
-        <div class="container">
-            <h3 class="fw-bold">Let {{ $siteName}} Help You</h3>
-            <p>We provide expert guidance to ensure you make the best retirement decisions.</p>
-            <a href="{{ route('register') }}" class="btn btn-light btn-lg mt-3">Get Started</a>
-        </div>
-    </section>
 
 
-@endsection
+        @endsection

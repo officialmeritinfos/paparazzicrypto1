@@ -2,17 +2,18 @@
 @section('content')
     @push('css')
         <style>
-
             small {
                 font-size: 14px;
                 text-transform: initial;
             }
+
             .single-price {
                 text-align: center;
                 background: #262626;
                 transition: .7s;
                 margin-top: 20px;
             }
+
             .single-price h3 {
                 font-size: 30px;
                 color: #000;
@@ -24,22 +25,26 @@
                 font-family: poppins;
                 color: #fff;
             }
+
             .single-price h4 {
                 font-size: 20px;
                 font-weight: 500;
                 color: #fff;
             }
+
             .single-price h4 span.sup {
                 vertical-align: text-top;
                 font-size: 15px;
             }
+
             .deal-top {
                 position: relative;
-                background: #104547;
+                background: #0c1023;
                 font-size: 16px;
                 text-transform: uppercase;
                 padding: 136px 24px 0;
             }
+
             .deal-top::after {
                 content: "";
                 position: absolute;
@@ -47,18 +52,21 @@
                 bottom: -50px;
                 width: 0;
                 height: 0;
-                border-top: 50px solid #104547;
+                border-top: 50px solid #0c1023;
                 border-left: 175px solid transparent;
                 border-right: 183px solid transparent;
             }
+
             .deal-bottom {
                 padding: 56px 16px 0;
             }
+
             .deal-bottom ul {
                 margin: 0;
                 padding: 0;
             }
-            .deal-bottom  ul li {
+
+            .deal-bottom ul li {
                 font-size: 16px;
                 color: #fff;
                 font-weight: 300;
@@ -67,11 +75,12 @@
                 padding-top: 16px;
                 list-style: none;
             }
+
             .btn-area a {
                 display: inline-block;
                 font-size: 18px;
                 color: #fff;
-                background: #104547;
+                background: #0c1023;
                 padding: 8px 64px;
                 margin-top: 32px;
                 border-radius: 4px;
@@ -83,34 +92,37 @@
 
 
             .single-price:hover {
-                background: #104547;
+                background: #0c1023;
             }
+
             .single-price:hover .deal-top {
                 background: #262626;
             }
+
             .single-price:hover .deal-top:after {
                 border-top: 50px solid #262626;
             }
+
             .single-price:hover .btn-area a {
                 background: #262626;
             }
+
             /* ignore the code below */
 
 
-            .link-area
-            {
-                position:fixed;
-                bottom:20px;
-                left:20px;
-                padding:15px;
-                border-radius:40px;
-                background:#104547;
+            .link-area {
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                padding: 15px;
+                border-radius: 40px;
+                background: #0c1023;
             }
-            .link-area a
-            {
-                text-decoration:none;
-                color:#fff;
-                font-size:25px;
+
+            .link-area a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 25px;
             }
         </style>
     @endpush
@@ -137,7 +149,8 @@
                         <div class="single-price">
                             <div class="deal-top">
                                 <h3>{{$package->name}}</h3>
-                                <h4> {{$package->roi}}%/ <span class="sup">{{$option->getReturnType($package->returnType)}}</span> </h4>
+                                <h4> {{$package->roi}}%/ <span
+                                        class="sup">{{$option->getReturnType($package->returnType)}}</span> </h4>
                                 <small class="text-white">{{$package->note}}</small>
                             </div>
                             <div class="deal-bottom">
