@@ -65,6 +65,10 @@ class Withdrawals extends Controller
         }
         $input = $validator->validated();
 
+        if ($user->isVerified!=1){
+            return back()->with('error','Your account is not verified. Please submit your KYC first before withdrawal.');
+        }
+
         if ($user->loan >0){
             return back()->with('error','You cannot make any withdrawal until you have cleared your loan of
             $'.number_format($user->loan,2).'. Please contact support for more details regarding this.');

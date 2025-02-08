@@ -45,9 +45,9 @@
 
         .whatsapp-float-widget {
             position: fixed;
-            left: 70px;
+            right: 10px;
             /* Adjust the left positioning as needed */
-            bottom: 10px;
+            bottom: 25rem;
             /* Adjust the bottom positioning as needed */
             z-index: 9999;
         }
@@ -164,13 +164,19 @@
     @yield('content')
 
     @if (!empty($web->phone))
-    <div class="telegram-float-widget">
+    <div class="whatsapp-float-widget">
         <a href="https://wa.me/{{ $web->phone }}" target="_blank">
             <img src="https://cdn2.iconfinder.com/data/icons/social-media-applications/64/social_media_applications_23-whatsapp-256.png"
                 alt="" width="50">
         </a>
     </div>
     @endif
+    <div class="telegram-float-widget">
+        <a href="https://t.me/aspreyfund" target="_blank">
+            <img src="https://cdn3.iconfinder.com/data/icons/social-icons-33/512/Telegram-512.png"
+                 alt="" width="50">
+        </a>
+    </div>
     <!-- Start Footer Area -->
     <footer class="footer-area">
         <div class="container">
