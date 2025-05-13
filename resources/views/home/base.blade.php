@@ -194,6 +194,11 @@
         </a>
     </div>
     @endif
+    <div class="" style="position: fixed; left: 0; bottom: 0; width: 100%; text-align: center; height: 40px; display: flex;">
+        <p style="flex: 0.90;"></p>
+        <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+        <coingecko-coin-price-marquee-widget coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd" background-color="#ffffff" locale="en"></coingecko-coin-price-marquee-widget>
+    </div>
     <!-- Start Footer Area -->
     <footer class="footer-area">
         <div class="container">
