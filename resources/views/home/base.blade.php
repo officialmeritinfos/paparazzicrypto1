@@ -108,7 +108,7 @@
                 <div class="container">
                     <div class="enry-responsive-menu">
                         <div class="logo">
-                            <a href="{{ url('/') }}"><img src="{{asset('home/images/'.$web->logo)}}" style="width: 60px;" alt="logo"></a>
+                            <a href="{{ url('/') }}"><img src="{{asset('home/images/'.$web->logo)}}" style="width: 150px;" alt="logo"></a>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
             <div class="enry-nav">
                 <div class="container-fluid">
                     <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="{{ url(('/')) }}"><img src="{{asset('home/images/'.$web->logo)}}" style="width: 60px;" alt="logo"></a>
+                        <a class="navbar-brand" href="{{ url(('/')) }}"><img src="{{asset('home/images/'.$web->logo)}}" style="width: 150px;" alt="logo"></a>
 
                         <div class="collapse navbar-collapse mean-menu">
                             <ul class="navbar-nav">
@@ -222,6 +222,7 @@
                             <li><a href="{{url('contact')}}">Contact Us</a></li>
                             <li><a href="{{url('plans')}}">Plans</a></li>
                             <li><a href="{{url('faqs')}}">FAQs</a></li>
+                            <li><a href="{{ asset('ceritficate.pdf') }}" target="_blank">Our Certificate</a></li>
                         </ul>
                     </div>
                 </div>
@@ -387,7 +388,18 @@
     <!-- end popup massage -->
     @stack('js')
 
-
+    <!-- Smartsupp Live Chat script -->
+    <script type="text/javascript">
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = '2945f7cca767b8ae178accc21ca67885c589f90f';
+        window.smartsupp||(function(d) {
+            var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+            s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+            c.type='text/javascript';c.charset='utf-8';c.async=true;
+            c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+        })(document);
+    </script>
+    <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
 
 </body>
 
