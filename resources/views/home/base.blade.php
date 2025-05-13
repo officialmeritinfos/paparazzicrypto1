@@ -67,99 +67,114 @@
 
 <body>
     @inject('injected','App\Defaults\Custom')
+    <!-- Start Header Area -->
+    <div class="header-area">
 
-    <!-- Start Top Header Area -->
-    <div class="top-header-area">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-lg-4 col-md-4">
-                    <ul class="top-header-social-links d-flex align-items-center">
-                        <li>Follow us on:</li>
-                        <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="ri-twitter-fill"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="ri-instagram-line"></i></a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-8 col-md-8">
-                    <ul class="top-header-contact-info">
-                        <li><i class="ri-time-line"></i><span>SUN - SAT:</span> 24/7</li>
-                        <li><i class="ri-map-pin-2-line"></i><span>OFFICE:</span> {!! $web->address !!}</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Top Header Area -->
-
-    <!-- Start Navbar Area -->
-    <div class="navbar-area">
-        <div class="enry-responsive-nav">
-            <div class="container">
-                <div class="enry-responsive-menu">
-                    <div class="logo">
-                        <a href="{{url('/')}}"><img src="{{asset('home/images/'.$web->logo)}}" style="width: 60px;"
-                                alt="logo"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="enry-nav">
+        <!-- Start Top Header Area -->
+        <div class="top-header-area">
             <div class="container-fluid">
-                <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('home/images/'.$web->logo)}}"
-                            style="width: 80px;" alt="logo"></a>
+                <div class="top-header-inner">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="top-header-left-side">
+                                <div class="d-flex align-items-center">
+                                    <ul class="top-header-social-links d-flex align-items-center">
+                                        <li>Follow us:</li>
+                                        <li><a href="#" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="ri-twitter-fill"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="ri-instagram-line"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-                    <div class="collapse navbar-collapse mean-menu">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a href="{{url('/')}}" class="nav-link">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{url('about')}}" class="nav-link">About</a>
-                            </li>
-
-                            <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Pages</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="{{url('plans')}}" class="nav-link">Plans</a></li>
-                                    <li class="nav-item"><a href="{{url('faqs')}}" class="nav-link">Frequently Asked
-                                            Questions</a></li>
-                                    <li class="nav-item"><a href="{{url('terms')}}" class="nav-link">Terms &
-                                            Conditions</a></li>
-                                    <li class="nav-item"><a href="{{url('privacy')}}" class="nav-link">Privacy
-                                            policy</a></li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Services</a>
-                                <ul class="dropdown-menu">
-                                    @foreach($injected->getServices() as $service)
-                                    <li class="nav-item"><a href="{{route('service.details',['id'=>$service->id])}}"
-                                            class="nav-link">{{$service->title}}</a></li>
-                                    @endforeach
-                                </ul>
-                            </li>
-
-                            <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Account</a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item"><a href="{{route('login')}}" class="nav-link">Login</a></li>
-
-                                    <li class="nav-item"><a href="{{route('register')}}" class="nav-link">Register</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item"><a href="{{url('contact')}}" class="nav-link">Contact</a></li>
-                        </ul>
-
+                        <div class="col-lg-8 col-md-12">
+                            <ul class="top-header-contact-info">
+                                <li><i class="ri-time-line"></i><span>SUN - SAT:</span> 24/7</li>
+                                <li><i class="ri-map-pin-2-line"></i><span>OFFICE:</span> {!! $web->address !!}</li>
+                            </ul>
+                        </div>
                     </div>
-                </nav>
+                </div>
             </div>
         </div>
+        <!-- End Top Header Area -->
+
+
+        <!-- Start Navbar Area -->
+        <div class="navbar-area navbar-style-two">
+            <div class="enry-responsive-nav">
+                <div class="container">
+                    <div class="enry-responsive-menu">
+                        <div class="logo">
+                            <a href="{{ url('/') }}"><img src="{{asset('home/images/'.$web->logo)}}" style="width: 60px;" alt="logo"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="enry-nav">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <a class="navbar-brand" href="{{ url(('/')) }}"><img src="{{asset('home/images/'.$web->logo)}}" style="width: 60px;" alt="logo"></a>
+
+                        <div class="collapse navbar-collapse mean-menu">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="{{url('/')}}" class="nav-link">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{url('about')}}" class="nav-link">About</a>
+                                </li>
+
+                                <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Pages</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a href="{{url('plans')}}" class="nav-link">Plans</a></li>
+                                        <li class="nav-item"><a href="{{url('faqs')}}" class="nav-link">Frequently Asked
+                                                Questions</a></li>
+                                        <li class="nav-item"><a href="{{url('terms')}}" class="nav-link">Terms &
+                                                Conditions</a></li>
+                                        <li class="nav-item"><a href="{{url('privacy')}}" class="nav-link">Privacy
+                                                policy</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Services</a>
+                                    <ul class="dropdown-menu">
+                                        @foreach($injected->getServices() as $service)
+                                            <li class="nav-item"><a href="{{route('service.details',['id'=>$service->id])}}"
+                                                                    class="nav-link">{{$service->title}}</a></li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item"><a href="#" class="dropdown-toggle nav-link">Account</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a href="{{route('login')}}" class="nav-link">Login</a></li>
+
+                                        <li class="nav-item"><a href="{{route('register')}}" class="nav-link">Register</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item"><a href="{{url('contact')}}" class="nav-link">Contact</a></li>
+                            </ul>
+
+                            <div class="others-option">
+                                <div class="cart-btn">
+                                    <a href="{{ route('login') }}"><i class="ri-login-box-fill"></i><span></span></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar Area -->
+
     </div>
-    <!-- End Navbar Area -->
 
     @yield('content')
 

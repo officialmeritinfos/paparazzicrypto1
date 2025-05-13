@@ -1,96 +1,84 @@
 @extends('home.base')
 @section('content')
-<!-- Start Main Banner Area -->
-<div class="main-banner-area">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12">
-                <div class="main-banner-content">
-                    <span class="sub-title">WELCOME TO {{strtoupper($siteName)}}</span>
-                    <h1>Trade & Invest like a Pro with {{$siteName}}</h1>
-                    <p>
-                        Build your financial portfolio in Gold Mining, Real Estate; invest in medical cannabis
-                        and in cryptocurrency; earn and save for your retirements, receive proper financial
-                        advice and planning service with {{$siteName}}
-                    </p>
-                    <div class="btn-box">
-                        <a href="{{route('register')}}" class="default-btn">Get Started <i
-                                class="ri-arrow-right-line"></i></a>
-                        <a href="{{route('login')}}" class="default-btn">Login <i class="ri-arrow-right-line"></i></a>
+
+    <!-- Start Home Area -->
+    <div class="home-slides owl-carousel owl-theme">
+        <div class="single-banner-item bg1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="banner-item-content">
+                            <span class="sub-title">WELCOME TO {{ $siteName }}</span>
+                            <h1>Diversified Investment Solutions for a Wealthier Future</h1>
+                            <p>From cryptocurrency and real estate to oil, gold, and medical cannabis — {{ $siteName }} helps you grow and protect your wealth across the world’s most lucrative markets.</p>
+                            <div class="btn-box">
+                                <a href="{{ route('login') }}" class="default-btn">Login <i class="ri-arrow-right-line"></i></a>
+                                <a href="{{ route('register') }}" class="default-btn">Get Started <i class="ri-arrow-right-line"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="banner-item-image">
+                            <img src="{{ asset('home/img/banner/banner2.png') }}" alt="image">
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="col-lg-6 col-md-12">
-                <div class="main-banner-image">
-                    <!-- TradingView Widget BEGIN -->
-                    <div class="tradingview-widget-container">
-                        <div class="tradingview-widget-container__widget"></div>
-                        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/"
-                                rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on
-                                    TradingView</span></a></div>
-                        <script type="text/javascript"
-                            src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
-                            {
-    "symbols": [
-      [
-        "Apple",
-        "AAPL|1D"
-      ],
-      [
-        "Google",
-        "GOOGL|1D"
-      ],
-      [
-        "Microsoft",
-        "MSFT|1D"
-      ]
-    ],
-    "chartOnly": false,
-    "width": "100%",
-    "height": "500",
-    "locale": "en",
-    "colorTheme": "light",
-    "autosize": true,
-    "showVolume": false,
-    "showMA": false,
-    "hideDateRanges": false,
-    "hideMarketStatus": false,
-    "hideSymbolLogo": false,
-    "scalePosition": "right",
-    "scaleMode": "Normal",
-    "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
-    "fontSize": "10",
-    "noTimeScale": false,
-    "valuesTracking": "1",
-    "changeMode": "price-and-percent",
-    "chartType": "area",
-    "maLineColor": "#2962FF",
-    "maLineWidth": 1,
-    "maLength": 9,
-    "headerFontSize": "medium",
-    "lineWidth": 2,
-    "lineType": 0,
-    "dateRanges": [
-      "1d|1",
-      "1m|30",
-      "3m|60",
-      "12m|1D",
-      "60m|1W",
-      "all|1M"
-    ]
-  }
-                        </script>
+        <div class="single-banner-item bg2">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="banner-item-content">
+                            <span class="sub-title">WHY CHOOSE {{ $siteName }}</span>
+                            <h1>Invest Smarter, Live Better</h1>
+                            <p>Our team of experts brings deep insight across financial markets to help you plan retirement, hedge with gold, invest in property, or tap into the fast-growing crypto and cannabis economies.</p>
+                            <div class="btn-box">
+                                <a href="{{ route('login') }}" class="default-btn">Login <i class="ri-arrow-right-line"></i></a>
+                                <a href="{{ route('register') }}" class="default-btn">Get Started <i class="ri-arrow-right-line"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- TradingView Widget END -->
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="banner-item-image">
+                            <img src="{{ asset('home/img/banner/banner3.png') }}" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="single-banner-item bg3">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="banner-item-content">
+                            <span class="sub-title">YOUR FUTURE STARTS HERE</span>
+                            <h1>Build Long-Term Wealth With Confidence</h1>
+                            <p>Whether you’re a seasoned investor or just getting started, {{ $siteName }} gives you access to vetted opportunities that align with your risk profile and financial goals.</p>
+                            <div class="btn-box">
+                                <a href="{{ route('login') }}" class="default-btn">Login <i class="ri-arrow-right-line"></i></a>
+                                <a href="{{ route('register') }}" class="default-btn">Get Started <i class="ri-arrow-right-line"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="banner-item-image">
+                            <img src="{{ asset('home/img/banner/banner4.png') }}" alt="image">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End Main Banner Area -->
+    <!-- End Home Area -->
 
-<!-- Start Services Area -->
+
+    <!-- Start Services Area -->
 <div class="services-area pt-100">
     <div class="container">
         <div class="section-title">

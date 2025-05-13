@@ -9,4 +9,8 @@ class Package extends Model
 {
     use HasFactory;
     protected $guarded=[];
+
+    protected $casts = [
+        'minAmount' => 'decimal:2'
+    ];
 }
