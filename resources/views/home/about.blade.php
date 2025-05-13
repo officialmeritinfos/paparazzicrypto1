@@ -38,8 +38,8 @@
                         primarily dedicated to strategic investments.</p>
                     <p class="about-one__text-2">
                         {{$siteName}} is managed by a team of trading experts specializing in generating profits through
-                        currency, stocks, options, and commodities trading on the foreign exchange market. We employ a
-                        variety of trading techniques to meet client goals.
+                        cryptocurrency, stocks options, and commodity trading on the foreign exchange market. We employ a
+                        variety of trading techniques to meet our client goals.
                     </p>
                     <p class="about-one__text-2">
                         The {{$siteName}} team comprises financial market professionals assembled to provide the best

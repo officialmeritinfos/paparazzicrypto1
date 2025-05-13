@@ -41,7 +41,9 @@
                             <div id="collapse-1-1" class="collapse" aria-labelledby="heading-1-1"
                                  data-parent="#accordion-1">
                                 <div class="card-body">
-                                    <p>{{$siteName}} our company provides a full investment service focused on the bitcoin and cryptocurrency market We are among the best platforms to invest and grow your bitcoin and other cryptocurrency</p>
+                                    <p>{{$siteName}} our company provides a full investment service focused on the bitcoin
+                                        and cryptocurrency market We are among the best platforms to invest and grow your
+                                        bitcoin and other cryptocurrency. </p>
                                 </div>
                             </div>
                         </div>
@@ -195,7 +197,8 @@
                             <div id="collapse-2-8" class="collapse" aria-labelledby="heading-2-8"
                                  data-parent="#accordion-2">
                                 <div class="card-body">
-                                    <p>Yes we are officially and properly registered with the United State . our company registration number is USFDAISO34847676   and registered with the name {{$siteName}}</p>
+                                    <p>Yes we are officially and properly registered with the address {!! $web->address !!} .
+                                        Our company registration number is 11147136  and registered with the name {{$siteName}}</p>
                                 </div>
                             </div>
                         </div>
@@ -231,7 +234,7 @@
                             <div id="collapse-2-10" class="collapse" aria-labelledby="heading-2-10"
                                  data-parent="#accordion-2">
                                 <div class="card-body">
-                                    <p>You can make as many deposit as you want on any of our investment plans except theHERCULES ARBITRAGE PLAN where you can only invest two times. And you can only withdraw once in the HERCULES ARBITRAGE PLAN.</p>
+                                    <p>You can make as many deposit as you want on any of our investment plans.</p>
                                 </div>
                             </div>
                         </div>
