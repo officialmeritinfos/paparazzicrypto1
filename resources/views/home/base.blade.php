@@ -171,12 +171,14 @@
         </a>
     </div>
     @endif
+    @if (!empty($web->telegram))
     <div class="telegram-float-widget">
-        <a href="https://t.me/aspreyfund" target="_blank">
+        <a href="{{ $web->telegram }}" target="_blank">
             <img src="https://cdn3.iconfinder.com/data/icons/social-icons-33/512/Telegram-512.png"
                  alt="" width="50">
         </a>
     </div>
+    @endif
     <!-- Start Footer Area -->
     <footer class="footer-area">
         <div class="container">
@@ -369,19 +371,9 @@
     </script>
     <!-- end popup massage -->
     @stack('js')
-    <!-- Smartsupp Live Chat script -->
-    <!-- Smartsupp Live Chat script -->
-    <script type="text/javascript">
-        var _smartsupp = _smartsupp || {};
-        _smartsupp.key = 'ad1295a149a673248e0e58e6b6b68312e4f897a3';
-        window.smartsupp||(function(d) {
-            var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-            s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-            c.type='text/javascript';c.charset='utf-8';c.async=true;
-            c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-        })(document);
-    </script>
-    <noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+
+
+
 </body>
 
 </html>
