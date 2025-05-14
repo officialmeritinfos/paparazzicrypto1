@@ -15,6 +15,7 @@
                     <tr>
                         <th>Reference</th>
                         <th>Amount</th>
+                        <th>Service</th>
                         <th>Roi</th>
                         <th>Current profit</th>
                         <th>Date Initiated</th>
@@ -27,6 +28,7 @@
                         <tr>
                             <td>{{$investment->reference}}</td>
                             <td>{{number_format($investment->amount,2)}}</td>
+                            <td>{{$investment->service}}</td>
                             <td>{{$investment->roi}}%</td>
                             <td>{{$investment->currentProfit}}</td>
                             <td>{{$investment->created_at}}</td>

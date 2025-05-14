@@ -64,6 +64,16 @@
                                 @endif
                             </select>
                         </div>
+                        <div class="form-group col-md-12 mx-auto">
+                            <label for="inputAddress2">Account</label>
+                            <select type="number" class="form-control form-control-lg" id="inputAddress2"
+                                    name="service">
+                                <option value="">Select a Service</option>
+                                @foreach($services as $service)
+                                    <option value="{{$service->title}}">{{$service->title}}</option>
+                                @endforeach
+                            </select>
+                        </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary">Invest</button>
                         </div>

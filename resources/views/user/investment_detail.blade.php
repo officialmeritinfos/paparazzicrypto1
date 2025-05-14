@@ -59,6 +59,7 @@
                             <thead>
                             <tr>
                                 <th scope="col">#</th>
+                                <th scope="col">Service</th>
                                 <th scope="col">Amount</th>
                                 <th scope="col">Current Profit</th>
                                 <th scope="col">Roi</th>
@@ -68,6 +69,7 @@
                             <tbody>
                             <tr>
                                 <th scope="row">1</th>
+                                <td>{{$investment->service}}</td>
                                 <td>${{number_format($investment->amount,2)}}</td>
                                 <td>${{number_format($investment->currentProfit,2)}}</td>
                                 <td>{{$investment->roi}}%</td>
