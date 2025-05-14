@@ -69,7 +69,7 @@
                             <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td>{{$investment->service}}</td>
+                                <td>{{$investment->service??'N/A'}}</td>
                                 <td>${{number_format($investment->amount,2)}}</td>
                                 <td>${{number_format($investment->currentProfit,2)}}</td>
                                 <td>{{$investment->roi}}%</td>

@@ -18,6 +18,7 @@
                         <th>Amount</th>
                         <th>Asset</th>
                         <th>Address</th>
+                        <th>Service</th>
                         <th>Source</th>
                         <th>Roi</th>
                         <th>Current profit</th>
@@ -34,7 +35,8 @@
                             <td>{{$investment->reference}}</td>
                             <td>{{number_format($investment->amount,2)}}</td>
                             <td>{{$investment->asset}}</td>
-                            <td>{{$investment->wallet}}</td>
+                            <td>{{$investment->wallet??'N/A'}}</td>
+                            <td>{{$investment->service??'N/A'}}</td>
                             <td>
                                 @switch($investment->source)
                                     @case('balance')
