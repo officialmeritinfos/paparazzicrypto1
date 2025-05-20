@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\Withdrawals;
 use App\Http\Controllers\Auth\Login;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Admin\Mails;
 
 /*
 |--------------------------------------------------------------------------
@@ -178,6 +179,10 @@ Route::get('latest-transactions/index',[LatestTransactionController::class,'land
 Route::post('latest-transaction/create',[LatestTransactionController::class,'newTransaction'])->name('latest-transaction.new-transaction');
 Route::get('latest-transaction/{id}/delete',[PromoController::class,'delete'])->name('latest-transaction.delete');
 
+//Mail
+Route::get('mail',[Mails::class,'landingPage'])->name('mail.index');
+Route::get('mail/create',[Mails::class,'create'])->name('mail.create');
+Route::post('mail/new',[Mails::class,'newPromo'])->name('mail.new');
 
 //Logout
 Route::get('logout',[Login::class,'logout']);

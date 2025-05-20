@@ -99,7 +99,8 @@
                     <a class="collapse-item" href="{{route('admin.promo.index')}}">Promos</a>
                     <a class="collapse-item" href="{{route('admin.notification.index')}}">Notifications</a>
                     <a class="collapse-item" href="{{route('admin.accounts.duration.index')}}">Managed Account Duration</a>
-                    <a class="collapse-item" href="{{route('admin.latest-transactions.index')}}">Latest Transactions</a>
+{{--                    <a class="collapse-item" href="{{route('admin.latest-transactions.index')}}">Latest Transactions</a>--}}
+                    <a class="collapse-item" href="{{route('admin.mail.index')}}">Mail</a>
                 </div>
             </div>
         </li>
